@@ -27,6 +27,8 @@ queue tops out there with the generator CPU still mostly idle. ptime is fixed at
   where `sendmmsg()` did *not* fit the per-call-socket sender. One syscall drains a
   whole batch.
 
+We use it as one of the tests for our [VQ-monitor](https://sevana.biz/vq-monitor-voip-call-quality-monitoring) - which supports processing millions of PPS.
+
 ## Measured throughput
 
 One sender process, one TX queue, one core, G.711 at 20 ms ptime (50 pps/flow).
